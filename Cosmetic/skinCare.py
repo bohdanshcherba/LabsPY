@@ -1,9 +1,10 @@
-from lab3.cosmetic import Cosmetic
+from Cosmetic.SkinType import SkinType
+from cosmetic import Cosmetic
 
 
 class SkinCare(Cosmetic):
     def __init__(self, name, price, producer, category, gender, professional_beauty, field, manufacturing_process,
-                 skin_types, attributes):
+                 skin_types = SkinType, attributes = "none"):
         super().__init__(name, price, producer, category, gender, professional_beauty, field, manufacturing_process)
         self.skin_types = skin_types
         self.attributes = attributes

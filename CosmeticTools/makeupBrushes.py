@@ -1,4 +1,4 @@
-from lab3.cosmeticTools import CosmeticTools
+from cosmeticTools import CosmeticTools
 
 
 class MakeupBrushes(CosmeticTools):

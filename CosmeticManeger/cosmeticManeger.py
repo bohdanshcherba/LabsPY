@@ -1,6 +1,6 @@
-from lab3.CosmeticManeger.sortOrder import SortOrder
+from CosmeticManeger.sortOrder import SortOrder
 from operator import attrgetter
-from lab3.gender import Gender
+from gender import Gender
 
 # class Test:
 #     def __init__(self, name, gender):

@@ -1,4 +1,4 @@
-from lab3.cosmetic import Cosmetic
+from cosmetic import Cosmetic
 
 
 class HairCare(Cosmetic):

@@ -1,4 +1,4 @@
-from lab3.items import Items
+from items import Items
 
 
 class CosmeticTools(Items):

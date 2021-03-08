@@ -1,25 +1,27 @@
-from lab3.Cosmetic.hairCare import HairCare
-from lab3.CosmeticManeger.cosmeticManeger import CosmeticManeger
-from lab3.gender import Gender
-from lab3.Cosmetic.makeup import Makeup
-from lab3.Cosmetic.skinCare import SkinCare
-from lab3.CosmeticTools.hairCuttingTools import HairCuttingTools
-from lab3.CosmeticTools.makeupBrushes import MakeupBrushes
+from Cosmetic.hairCare import HairCare
+from CosmeticManeger.cosmeticManeger import CosmeticManeger
+from gender import Gender
+from Cosmetic.makeup import Makeup
+from Cosmetic.skinCare import SkinCare
+from CosmeticTools.hairCuttingTools import HairCuttingTools
+from CosmeticTools.makeupBrushes import MakeupBrushes
+from Cosmetic.types import Types
+from Cosmetic.SkinType import SkinType
 
 def main():
     hc = HairCare(name='Nutrisse Nourishing', price=9.76, producer='Garnier', category='Hair Care',
                   gender=Gender.UNISEX.name,
-                  professional_beauty=True, field="Medium ", manufacturing_process=False, hair_type='Natural Brown',
+                  professional_beauty=True, field="Medium ", manufacturing_process=Types.MachineMade.name, hair_type='Natural Brown',
                   hair_consern='nourishing', hair_care_attributes='Oil Powered')
 
     mu = Makeup(name='Rainbow Colors ', price=9.98, producer='BestLand', category='Makeup',
                 gender=Gender.FEMALE.name,
-                professional_beauty=True, field="Powder", manufacturing_process=False, makeup_format="Palette ",
+                professional_beauty=True, field="Powder", manufacturing_process=Types.HandMade.name, makeup_format="Palette ",
                 makeup_attributes=" Cruelty Free", makeup_for=" Eye")
 
     sc = SkinCare(name='Aloe Skin Care Cream ', price=89.90, producer='InfiniteAloe', category='Skin Care',
                   gender=Gender.UNISEX.name,
-                  professional_beauty=False, field="Jars", manufacturing_process=False, skin_types="All Skin Types",
+                  professional_beauty=False, field="Jars", manufacturing_process=Types.MachineMade.name, skin_types=SkinType.Combination.name,
                   attributes="Original Scent")
 
     hct = HairCuttingTools(name="Hair Cutting Scissors", price=9.99, producer="Fcysy", category="Hair Cutting Tools",
