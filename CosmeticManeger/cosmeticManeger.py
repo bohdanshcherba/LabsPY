@@ -28,7 +28,7 @@ class CosmeticManeger():
                 print("----------------------------------------------")
 
     def sort_by_price(self, SortOrder = SortOrder):
-        sortedd = sorted(self.items, key=attrgetter('price'), reverse=True)
+        sortedd = sorted(self.items , key=attrgetter('price'), reverse= SortOrder)
         for i in sortedd:
             print(i)
             print("___________________________________________")

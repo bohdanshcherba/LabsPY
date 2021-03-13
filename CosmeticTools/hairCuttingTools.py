@@ -3,7 +3,7 @@ from cosmeticTools import CosmeticTools
 
 class HairCuttingTools(CosmeticTools):
     def __init__(self, name, price, producer, category, professional_beauty, tools_type, electric, for_lenght_hair):
-        super().__init__(self, name, price, producer, category, professional_beauty)
+        super().__init__(name, price, producer, category, professional_beauty)
         self.tools_type = tools_type
         self.electric = electric
         self.for_lenght_hair = for_lenght_hair
