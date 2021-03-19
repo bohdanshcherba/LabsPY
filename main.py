@@ -11,7 +11,6 @@ from Cosmetic.SkinType import SkinType
 customer_money = 0
 
 
-
 def main():
     hc = HairCare(name='Nutrisse Nourishing', price=9.76, producer='Garnier', category='Hair Care',
                   gender=Gender.UNISEX.name,
@@ -37,10 +36,9 @@ def main():
     mb = MakeupBrushes(name="Syntus Makeup Brush Set", price=20.2, producer="Syntus", category="Makeup Brushes",
                        professional_beauty=False, brushes_for="Makeup", lenght_mm="all type", rigidity="hard")
 
-
-    list_cosmetic = [hc , mu , sc]
-    list_all = [hc , mu , sc,mb,hct]
-    list_tools = [mb,hct]
+    list_cosmetic = [hc, mu, sc]
+    list_all = [hc, mu, sc, mb, hct]
+    list_tools = [mb, hct]
 
     generalManeger = CosmeticManeger(list_all)
     cosmeticManeger = CosmeticManeger(list_cosmetic)
