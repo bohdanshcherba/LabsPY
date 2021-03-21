@@ -23,17 +23,23 @@ class CosmeticManeger():
         return out
 
 
-    def search_by_category(self, category):
+    def search_by_category(self, category: str):
+        out = list()
         for i in self.items:
             if i.category == category:
-                print(i)
-                print("----------------------------------------------")
+                out.append(i)
+        self.items = out
+        return out
+
 
     def sort_by_price(self, type = SortOrder):
-        sort = sorted(self.items, key=attrgetter('price'), reverse=type)
+        out = list()
+        sort = sorted(self.items, key=attrgetter('price'), reverse = type.value)
         for i in sort:
-            print(i)
-            print("___________________________________________")
+            out.append(i)
+
+        self.items = out
+        return out
 
     def money_chek(self, money):
         if money > 0:
