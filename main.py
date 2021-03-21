@@ -42,10 +42,13 @@ def main():
 
     generalManeger = CosmeticManeger(list_all)
     cosmeticManeger = CosmeticManeger(list_cosmetic)
-    cosmeticManeger.search_by_gender("FEMALE")
-    cosmeticManeger.search_by_category("Hair Cutting Tools")
-    generalManeger.sort_by_price(SortOrder=True)
-    generalManeger.money_chek(customer_money)
+    #cosmeticManeger.search_by_gender("FEMALE")
+    cosmeticManeger.search_by("FEMALE")
+    cosmeticManeger.print_items()
+
+    # cosmeticManeger.search_by_category("Hair Cutting Tools")
+    # generalManeger.sort_by_price(type=True)
+    # generalManeger.money_chek(customer_money)
 
 
 if __name__ == '__main__':
