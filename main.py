@@ -7,6 +7,7 @@ from CosmeticTools.hairCuttingTools import HairCuttingTools
 from CosmeticTools.makeupBrushes import MakeupBrushes
 from Cosmetic.types import Types
 from Cosmetic.SkinType import SkinType
+from CosmeticManeger.sortOrder import SortOrder
 
 customer_money = 0
 
@@ -38,13 +39,22 @@ def main():
 
     list_cosmetic = [hc, mu, sc]
     list_all = [hc, mu, sc, mb, hct]
-    list_tools = [mb, hct]
 
     generalManeger = CosmeticManeger(list_all)
     cosmeticManeger = CosmeticManeger(list_cosmetic)
+
+    print("\n_____________Search by gender_____________\n\n")
     cosmeticManeger.search_by_gender("FEMALE")
-    cosmeticManeger.search_by_category("Hair Cutting Tools")
-    generalManeger.sort_by_price(SortOrder=True)
+    cosmeticManeger.print_items()
+    print("\n_____________Search by category_____________\n\n")
+    generalManeger.search_by_category("Hair Cutting Tools")
+    generalManeger.print_items()
+    print("\n_____________Sort by price_____________\n\n")
+
+    generalManeger.sort_by_price(SortOrder.ASC)
+    generalManeger.print_items()
+
+    print("\n_____________Money chek_____________\n\n")
     generalManeger.money_chek(customer_money)
 
 

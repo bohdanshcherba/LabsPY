@@ -7,24 +7,39 @@ class CosmeticManeger():
     def __init__(self, items=list):
         self.items = list(items)
 
-    def search_by_gender(self, gender = Gender):
+    # def search_by_gender(self, gender=Gender):
+    #     for i in self.items:
+    #         if i.gender == gender:
+    #
+    #             print(i)
+    #             print("----------------------------------------------")
+
+    def search_by_gender(self, gender=Gender):
+        out = list()
         for i in self.items:
             if i.gender == gender:
-                print(i)
-                print("----------------------------------------------")
+                out.append(i)
+        self.items = out
+        return out
 
 
-    def search_by_category(self,category):
+    def search_by_category(self, category: str):
+        out = list()
         for i in self.items:
             if i.category == category:
-                print(i)
-                print("----------------------------------------------")
+                out.append(i)
+        self.items = out
+        return out
 
-    def sort_by_price(self, SortOrder = SortOrder):
-        sort = sorted(self.items , key=attrgetter('price'), reverse= SortOrder)
+
+    def sort_by_price(self, type = SortOrder):
+        out = list()
+        sort = sorted(self.items, key=attrgetter('price'), reverse = type.value)
         for i in sort:
-            print(i)
-            print("___________________________________________")
+            out.append(i)
+
+        self.items = out
+        return out
 
     def money_chek(self, money):
         if money > 0:
@@ -34,5 +49,7 @@ class CosmeticManeger():
         else:
             print("no goods for you :(")
 
-
-
+    def print_items(self):
+        for item in self.items:
+            print(type(item))
+            print(str(item))

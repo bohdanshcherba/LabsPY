@@ -2,8 +2,8 @@ from cosmetic import Cosmetic
 
 
 class Makeup(Cosmetic):
-    def __init__(self, name, price, producer, category, gender, professional_beauty,
-                 field, manufacturing_process, makeup_format, makeup_attributes, makeup_for):
+    def __init__(self, name='', price=0, producer='', category='', gender='', professional_beauty='',
+                 field='', manufacturing_process='', makeup_format='', makeup_attributes='', makeup_for=''):
         super().__init__(name, price, producer, category, gender, professional_beauty, field, manufacturing_process)
         self.makeup_format = makeup_format
         self.makeup_attributes = makeup_attributes
